@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class FollowPath : MonoBehaviour
 {
-    [SerializeField]
-    private Path path;
+    public Path path;
 
     [SerializeField]
     private float moveSpeed = 5f;

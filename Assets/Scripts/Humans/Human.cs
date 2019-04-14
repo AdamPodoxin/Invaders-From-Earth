@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Human : MonoBehaviour
 {
-    private float health = 1f;
+    [SerializeField]
+    private int health = 1;
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(int damage)
     {
         health -= damage;
 
