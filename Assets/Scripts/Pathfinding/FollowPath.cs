@@ -15,7 +15,7 @@ public class FollowPath : MonoBehaviour
     private Transform nextNode;
     private int nextNodeIndex = 0;
 
-    private void Start()
+    public void Start()
     {
         nextNode = path.Nodes[0];
 

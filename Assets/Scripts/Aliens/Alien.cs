@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Alien : MonoBehaviour
 {
-    private Collider2D[] humansInRange;
+    public Collider2D[] humansInRange;
 
     [SerializeField]
     private float range = 10f;
 
     private int humanLayer;
 
-    private void Start()
+    private void Awake()
     {
         humanLayer = 1 << LayerMask.NameToLayer("Human");
     }
@@ -19,7 +19,6 @@ public class Alien : MonoBehaviour
     private void Update()
     {
         CheckHumansInRange();
-
         LookAtHumanInRange();
     }
 
@@ -40,7 +39,7 @@ public class Alien : MonoBehaviour
         }
     }
 
-    private void Attack()
+    public virtual void Attack()
     {
         //This method is overridable
     }

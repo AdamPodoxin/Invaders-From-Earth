@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Human : MonoBehaviour
 {
-    private float health;
+    private float health = 1f;
 
     public void TakeDamage(float damage)
     {
